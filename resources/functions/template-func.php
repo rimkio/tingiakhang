@@ -1,5 +1,5 @@
 <?php
-function hoclaixe_post_item() {
+function tgk_post_item() {
 	?>
     <div class="item-inner">
         <a href="<?= get_the_permalink(); ?>" class="img-wrap"
@@ -21,7 +21,7 @@ function hoclaixe_post_item() {
 	<?php
 }
 
-function hoclaixe_news_related_post( $ID ) { ?>
+function tgk_news_related_post( $ID ) { ?>
     <div class="related-single">
         <div class="container">
             <?php

@@ -51,58 +51,19 @@ __webpack_provided_window_dot_jQuery = window.$ = jquery__WEBPACK_IMPORTED_MODUL
 (function ($) {
   "use strict";
 
-  var Accordion = function Accordion() {
-    $(document).on("click", ".hlx-page-faqs__list-question", function () {
-      $(this).parent().find('.hlx-page-faqs__list-anwser').slideToggle();
-      $(this).parent().toggleClass('active');
-    });
-  };
   var Gallery = function Gallery() {
     if (!$('.hlx-home-gallery__wrap-item').length) return;
-    if ($(window).width() < 767) {
-      $(".hlx-home-gallery__wrap-mobile").slick({
-        infinite: false,
-        arrows: true,
-        dots: true,
-        appendArrows: ".gallery-slick",
-        appendDots: '.gallery-slick'
-      });
-    } else {
-      $(".hlx-home-gallery__wrap").slick({
-        infinite: false,
-        arrows: true,
-        dots: true,
-        appendArrows: ".gallery-slick",
-        appendDots: '.gallery-slick'
-      });
-    }
+    $(".hlx-home-gallery__wrap").slick({
+      infinite: false,
+      arrows: true,
+      dots: true,
+      appendArrows: ".gallery-slick",
+      appendDots: '.gallery-slick'
+    });
   };
-  var News = function News() {
-    if (!$('.item-news-wrap__item').length) return;
-    if ($(window).width() < 767) {
-      $(".hlx-home-news__wrap-mb").slick({
-        infinite: false,
-        arrows: true,
-        dots: true,
-        appendArrows: ".news-slick",
-        appendDots: '.news-slick'
-      });
-    } else {
-      $(".hlx-home-news__wrap-dk").slick({
-        infinite: false,
-        arrows: true,
-        dots: true,
-        appendArrows: ".news-slick",
-        appendDots: '.news-slick'
-      });
-    }
-  };
-  $(window).on("load", function () {
-    Accordion();
-  });
+  $(window).on("load", function () {});
   $(document).ready(function () {
     Gallery();
-    News();
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

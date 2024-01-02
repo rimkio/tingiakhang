@@ -1,18 +1,36 @@
-<?php
-/**
- * Post loop
- */
-$index = 1;
-?>
-<div class="post-loop-container">
-    <div class="row">
-    <?php
-    /* Start the Loop */
-    while ( have_posts() ) :
-	    the_post();
-	    do_action( 'hoclaixe_hook_post_loop_item', get_the_ID(), $index );
-	    $index ++;
-    endwhile;
-    ?>
-    </div>
-</div>
+<?php
+
+/**
+
+ * Post loop
+
+ */
+
+$index = 1;
+
+?>
+
+<div class="post-loop-container">
+
+    <div class="row">
+
+    <?php
+
+    /* Start the Loop */
+
+    while ( have_posts() ) :
+
+	    the_post();
+
+	    do_action( 'tgk_hook_post_loop_item', get_the_ID(), $index );
+
+	    $index ++;
+
+    endwhile;
+
+    ?>
+
+    </div>
+
+</div>
+

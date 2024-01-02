@@ -18,14 +18,14 @@ function dump($data)
 }
 
 
-if (!function_exists('hoclaixe_svg_icon')) {
+if (!function_exists('tgk_svg_icon')) {
 
 	/**
 	 * @param $icon
 	 *
 	 * @return mixed|string
 	 */
-	function hoclaixe_svg_icon($icon)
+	function tgk_svg_icon($icon)
 	{
 		$icons = require(__DIR__ . '/svg.php');
 
@@ -33,8 +33,8 @@ if (!function_exists('hoclaixe_svg_icon')) {
 	}
 }
 
-if (!function_exists('hoclaixe_the_posts_navigation')) {
-	function hoclaixe_the_posts_navigation($args = array(), $base = false, $query = false)
+if (!function_exists('tgk_the_posts_navigation')) {
+	function tgk_the_posts_navigation($args = array(), $base = false, $query = false)
 	{
 		$args = wp_parse_args($args, array(
 			'prev_text'          => __('Older posts'),

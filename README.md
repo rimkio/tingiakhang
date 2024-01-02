@@ -37,7 +37,7 @@ In the theme there is a SASS mixin included in the `resources/assets/css/_mixins
 First, you'll need to define your scoped name in `resources/assets/scss/_vars.scss` like so...
 ```scss
 $settings: (
-  "scoped-name": "hoclaixe",
+  "scoped-name": "tgk",
 );
 ```
 

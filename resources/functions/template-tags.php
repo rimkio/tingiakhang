@@ -4,8 +4,8 @@
  * Template tags
  */
 
-if ( ! function_exists( 'hoclaixe_template_news_hero_header' ) ) {
-	function hoclaixe_template_news_hero_header() {
+if ( ! function_exists( 'tgk_template_news_hero_header' ) ) {
+	function tgk_template_news_hero_header() {
 
 		$page_for_posts_id = get_option( 'page_for_posts' );
 		$blog_link         = get_permalink( $page_for_posts_id );

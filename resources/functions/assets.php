@@ -19,7 +19,6 @@ add_action( 'wp_enqueue_scripts', function () {
 		'rest_url'     => get_rest_url(),
 	] );
 
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

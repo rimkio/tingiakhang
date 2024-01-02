@@ -27,8 +27,8 @@ add_action( 'after_setup_theme', function () {
 } );
 
 
-function hoclaixe_remove_admin_menus()
+function tgk_remove_admin_menus()
 {
 	remove_submenu_page('themes.php', 'widgets.php');
 }
-add_action('admin_menu', 'hoclaixe_remove_admin_menus');
+add_action('admin_menu', 'tgk_remove_admin_menus');

@@ -2,10 +2,10 @@
 
 add_action('after_setup_theme', function () {
 	register_nav_menus([
-		'main-menu'   => esc_html__('Primary', 'hoclaixe'),
-		'footer-menu' => esc_html__('Footer Menu', 'hoclaixe'),
-		'terms-menu'  => esc_html__('Terms Menu', 'hoclaixe'),
-		'discover-menu'  => esc_html__('Discover Menu', 'hoclaixe')
+		'main-menu'   => esc_html__('Primary', 'tgk'),
+		'footer-menu' => esc_html__('Footer Menu', 'tgk'),
+		'terms-menu'  => esc_html__('Terms Menu', 'tgk'),
+		'discover-menu'  => esc_html__('Discover Menu', 'tgk')
 	]);
 });
 
@@ -101,7 +101,7 @@ function filter_bootstrap_nav_menu_submenu_css_class($classes, $args, $depth)
 
 
 
-function hoclaixe_wp_nav_menu_objects($items, $args)
+function tgk_wp_nav_menu_objects($items, $args)
 {
 	if ($args->theme_location == 'discover-menu') {
 		foreach ($items as &$item) {
@@ -127,4 +127,4 @@ function hoclaixe_wp_nav_menu_objects($items, $args)
 	}
 	return $items;
 }
-add_filter('wp_nav_menu_objects', 'hoclaixe_wp_nav_menu_objects', 10, 2);
+add_filter('wp_nav_menu_objects', 'tgk_wp_nav_menu_objects', 10, 2);

@@ -8,8 +8,8 @@ require( __DIR__ . '/widget/loaded.php' );
 /**
  * Register sidebars
  */
-add_action( 'widgets_init', 'hoclaixe_widgets_init' );
-function hoclaixe_widgets_init() {
+add_action( 'widgets_init', 'tgk_widgets_init' );
+function tgk_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'News page',
 		'id'            => 'news-sidebar',

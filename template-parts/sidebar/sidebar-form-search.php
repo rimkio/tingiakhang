@@ -1,6 +1,6 @@
 <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
 
-	<div class="hoclaixe-wrapper-form">
+	<div class="tgk-wrapper-form">
 
 		<div class="search-fields">
 
