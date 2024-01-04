@@ -1,0 +1,166 @@
+.logged-in {
+    .tgk-header .tgk-header-inner .tgk-header-menu {
+        top: calc(85px + 46px);
+    }
+}
+
+.menu-open {
+    overflow: hidden;
+
+    .tgk-header .tgk-header-inner .tgk-header-menu {
+        left: 0;
+    }
+}
+
+.tgk-header {
+    @media (max-width: 767px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .tgk-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .tgk-header-logo {
+            a {
+                display: block;
+
+                img {
+                    max-width: 130px;
+                }
+            }
+        }
+
+        .tgk-header-menu {
+            transition: all 0.5s ease;
+
+            @media (max-width: 767px) {
+                position: fixed;
+                left: 0;
+                z-index: 99;
+                background: #FFF;
+                height: 100%;
+                width: 100%;
+                top: 85px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 30px;
+                left: 100%;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                @media (max-width: 767px) {
+                    display: block;
+                }
+
+                li {
+                    position: relative;
+
+                    a {
+                        color: #222222;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        padding: 30px 0;
+                        display: block;
+                        transition: all 0.3s ease;
+
+                        @media (max-width: 767px) {
+                            padding: 15px 0;
+                        }
+
+                        &:hover{
+                            color: #C39B46;
+                        }
+                    }
+
+                    &.menu-item-has-children {
+                        @media (max-width: 767px) {}
+
+                        a.nav-link {
+                            position: relative;
+
+                            &::after {
+                                display: inline-block;
+                                margin-left: 0.255em;
+                                vertical-align: 0.255em;
+                                content: "";
+                                border-top: 0.3em solid;
+                                border-right: 0.3em solid transparent;
+                                border-bottom: 0;
+                                border-left: 0.3em solid transparent;
+                            }
+                        }
+
+                        &:hover {
+                            .sub-menu {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .sub-menu {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 200px;
+                        background-color: white;
+                        z-index: 99;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 0;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: #ededed;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.5s ease;
+
+                        @media (max-width: 767px) {
+                            position: relative;
+                            width: 100%;
+                            visibility: visible;
+                            opacity: 1;
+                            border: none;
+                            display: none;
+                            transition: none;
+                        }
+
+                        li {
+                            display: block;
+                            width: 100%;
+
+                            &:not(:last-child) {
+                                border-bottom: 1px solid #ededed;
+                            }
+
+                            a {
+                                padding: 10px 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .tgk-menu-open {
+            img {
+                max-width: 40px;
+                cursor: pointer;
+            }
+
+            #tgk-menu-close {
+                display: none;
+            }
+        }
+    }
+}

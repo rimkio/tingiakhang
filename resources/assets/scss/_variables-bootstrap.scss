@@ -436,7 +436,7 @@ $body-emphasis-color: $black !default;
 //
 // Style anchor elements.
 
-$link-color: #11542B !default;
+$link-color: #C39B46 !default;
 $link-decoration: none !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
@@ -487,9 +487,9 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
   xl: 1140px,
   xxl: 1236px) !default;
 // scss-docs-end container-max-widths
@@ -587,10 +587,8 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: Montserrat, sans-serif !default;
-$font-family-monospace: Montserrat Alternates, sans-serif !default;
-$font-family-dm-sans: DM Sans, sans-serif;
-$font-family-inter: Inter, sans-serif;
+$font-family-sans-serif: Roboto, sans-serif !default;
+$font-family-monospace: Roboto, sans-serif !default;
 // stylelint-enable value-keyword-case
 $font-family-base: var(--#{$prefix}font-sans-serif) !default;
 $font-family-code: var(--#{$prefix}font-monospace) !default;
@@ -640,7 +638,7 @@ $headings-font-family: $font-family-sans-serif !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1 !default;
-$headings-color: #222 !default;
+$headings-color: #C39B46 !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings

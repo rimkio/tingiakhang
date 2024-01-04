@@ -9,14 +9,12 @@ window.jQuery = window.$ = $;
 
 
     const Gallery = () => {
-        if (!$('.hlx-home-gallery__wrap-item').length) return;
+        if (!$('.carousel__inner').length) return;
 
-        $(".hlx-home-gallery__wrap").slick({
+        $(".carousel__inner").slick({
             infinite: false,
-            arrows: true,
+            arrows: false,
             dots: true,
-            appendArrows: ".gallery-slick",
-            appendDots: '.gallery-slick',
         });
     }
 

@@ -1,15 +1,11 @@
 <?php
-
-$logo = get_field("logo_footer", "options");
-
-$social = get_field("social", "options");
-
-$ft_contact = get_field("ft_contact", "options");
-
+$logo = get_field("footer_logo", "option");
+$intro = get_field("intro", "option");
+$map = get_field("map", "option");
+$contact = get_field("contact", "option");
 ?>
 
 <footer id="site-footer" class="main-footer">
-
     <div style="background:#ffffff">
         <div class="container" style="padding-top:50px; padding-bottom:50px">
             <div class="row">
@@ -17,13 +13,13 @@ $ft_contact = get_field("ft_contact", "options");
                     <div style="height: auto; width:100%">
                         <div style="height:auto">
 
-                            <a href="http://www.thutoanfashion.com.vn"><img style="max-width:250px;" src="logo/1202/logo web.png"></a>
+                            <a href="http://www.thutoanfashion.com.vn"><img style="max-width:250px;" src="<?= $logo ?>"></a>
 
                         </div>
                         <div style="height:auto; padding-right:50px; padding-top:20px; color:#222222">
-                            <p style="text-align:justify"><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:16px">We have gained the trust of many global customers and partners with uniforms made from excellent fabric. Free design consultation and shipping. On-time delivery. Ready to serve anytime!</span></span></p>
+                            <p style="text-align:justify"><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:16px"><?= $intro ?></span></span></p>
 
-                            <p style="text-align:justify"><iframe height="200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.271984481638!2d106.68271657590604!3d10.790468558932778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d2d6571cdb%3A0xd45bf3e2789ba023!2zNjIvMzEgTMO9IENow61uaCBUaOG6r25nLCBQaMaw4budbmcgOCwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1697599854734!5m2!1svi!2s" style="border:0" width="100%"></iframe></p>
+                            <p style="text-align:justify"><?= $map ?></p>
 
                         </div>
 
@@ -31,7 +27,7 @@ $ft_contact = get_field("ft_contact", "options");
                 </div>
                 <div class="col-sm-3">
                     <div style="height: auto; width:100%">
-                        <h5 style="color:#0064b2">MY COMPANY</h5>
+                        <h5>CÔNG TY CHÚNG TÔI</h5>
                         <style>
                             .dropbtn {
                                 padding: 16px;
@@ -119,19 +115,9 @@ $ft_contact = get_field("ft_contact", "options");
                 </div>
                 <div class="col-sm-4">
                     <div style="height: auto; width:100%; color:#222222">
-                        <h5 style="color:#0064b2">CONTACT US</h5>
+                        <h5>LIÊN HỆ</h5>
                         <p style="padding-top:10px; clear:both"></p>
-                        <p><span style="text-transform:uppercase">Thu Toan Production Trading Service Co., Ltd.</span></p>
-                        <p>Address: 62/31 Ly Chinh Thang Street, Vo Thi Sau Ward, District 3, HCMC, VN<br><b>Warehouse:</b>&nbsp;115 Street 5, An Khanh W., Ninh Kieu Dist., Can Tho, VN</p>
-
-                        <p>
-                            Telephone: <a style="color:#222222" href="tel:+84937557105">+84937557105</a>
-                        </p>
-
-                        <p>Hotline: <strong><a style="color:#222222" href="tel:+84913040811">+84913040811</a></strong></p>
-
-                        <p>Email: <a style="color:#222222" href="mailto:fashion@thutoan.com.vn">fashion@thutoan.com.vn</a></p>
-
+                        <?= $contact ?>
                     </div>
                 </div>
             </div>
@@ -141,7 +127,7 @@ $ft_contact = get_field("ft_contact", "options");
     <div class="main-footer__socket">
         <div style="background:#ffffff">
             <div class="container" style="padding-top:18px; padding-bottom:18px">
-                <p style="text-align:left; padding:0px; margin:0px; ">© Copyright by Thu Toan Production Trading Service Co., Ltd. |<span style="font-size:13px"> Designed by <a target="_blank" style="color:; font-weight:500" href="https://www.yellowpages.com.vn">Vietnam Yellow Pages.</a></span></p>
+                <p style="text-align:left; padding:0px; margin:0px; ">© Copyright 2024 Tín Gia Khang.</p>
             </div>
         </div>
     </div>
