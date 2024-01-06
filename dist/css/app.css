@@ -8430,7 +8430,7 @@ img {
 }
 
 #breadcrumbs {
-  color: var(--prim, #11542B);
+  color: var(--prim, #C39B46);
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
@@ -8438,30 +8438,13 @@ img {
   line-height: 18px;
 }
 
-.hlx-heading {
-  color: #222;
-  text-align: center;
-  font-family: Montserrat Alternates;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 36px;
-  /* 100% */
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 11px;
-  margin-bottom: 60px;
+.site_breadcrumb {
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 
-.hlx-heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--prim, #11542B);
-  height: 4px;
-  width: 44px;
+.site_breadcrumb #breadcrumbs {
+  color: #222;
 }
 
 .logged-in .tgk-header .tgk-header-inner .tgk-header-menu {

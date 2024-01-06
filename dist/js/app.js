@@ -120,8 +120,8 @@ __webpack_provided_window_dot_jQuery = window.$ = jquery__WEBPACK_IMPORTED_MODUL
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\rimki\Local Sites\tingiakhang\app\public\wp-content\themes\tingiakhang\resources\assets\js\app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\tingiakhang\app\public\wp-content\themes\tingiakhang\resources\assets\scss\app.scss */"./resources/assets/scss/app.scss");
+__webpack_require__(/*! C:\Users\rimki\Local Sites\tgk\app\public\wp-content\themes\tingiakhang\resources\assets\js\app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\rimki\Local Sites\tgk\app\public\wp-content\themes\tingiakhang\resources\assets\scss\app.scss */"./resources/assets/scss/app.scss");
 
 
 /***/ })
