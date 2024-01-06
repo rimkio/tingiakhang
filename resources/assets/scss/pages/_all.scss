@@ -1,3 +1,62 @@
 @import 'home';
 @import '404';
 @import 'single';
+
+
+.list-categories {
+    &__wrap {
+        
+
+        a {
+            display: block;
+        }
+        &.active{
+            .toggle-cat {
+                background-color: #eee;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .toggle-cat {
+            color: #111;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            padding: 10px;
+            text-transform: uppercase;
+            position: relative;
+            display: block;
+            margin-bottom: 10px;
+
+            &::before {
+                content: "";
+                height: 16px;
+                width: 2px;
+                position: absolute;
+                right: 17px;
+                top: 14px;
+                background-color: #222;
+            }
+
+            &::after {
+                content: "";
+                height: 2px;
+                width: 16px;
+                position: absolute;
+                right: 10px;
+                top: 21px;
+                background-color: #222;
+            }
+        }
+
+        .list-wrap-product {
+            display: none;
+            padding: 0 18px;
+        }
+    }
+}

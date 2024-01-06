@@ -62,6 +62,10 @@ __webpack_provided_window_dot_jQuery = window.$ = jquery__WEBPACK_IMPORTED_MODUL
   $(window).on("load", function () {});
   $(document).ready(function () {
     Gallery();
+    $(document).on("click", ".toggle-cat", function () {
+      $(this).parent().toggleClass('active');
+      $(this).parent().find('.list-wrap-product').slideToggle();
+    });
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

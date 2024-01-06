@@ -25,5 +25,10 @@ window.jQuery = window.$ = $;
 
     $(document).ready(function () {
         Gallery();
+
+        $(document).on("click",".toggle-cat",function() {
+            $(this).parent().toggleClass('active');
+            $(this).parent().find('.list-wrap-product').slideToggle();
+        });
     })
 })(jQuery); 

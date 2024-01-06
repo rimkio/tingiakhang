@@ -3,9 +3,63 @@ $logo = get_field("footer_logo", "option");
 $intro = get_field("intro", "option");
 $map = get_field("map", "option");
 $contact = get_field("contact", "option");
+$address = get_field("address", "option");
+$phone = get_field("phone", "option");
+$phone_2 = get_field("phone_2", "option");
+$email_staff = get_field("email_staff", "option");
+$image_staff = get_field("image_staff", "option");
+$name_staff = get_field("name_staff", "option");
+$position = get_field("position", "option");
 ?>
 
 <footer id="site-footer" class="main-footer">
+
+    <div style="background:#effbff">
+
+        <div class="container" style="padding-top:50px; padding-bottom:38px">
+            <div style="width:100%; padding-bottom:10px; text-align:center">
+                <h2>LIÊN HỆ NGAY VỚI CHÚNG TÔI!</h2>
+            </div>
+
+            <div class="row" style="margin-top:15px">
+                <div class="col-sm-6" style="padding-top:13px">
+                    <div style="width:100%; height:auto; border:#CCCCCC; border-style:solid; border-width:1px; border-radius: 10px 10px 10px 10px; padding:18px; color:#000000">
+                        <h5><span style="text-transform:uppercase">Tín Gia Khang</span></h5>
+                        <p><strong>Address: </strong> <?= $address ?></p>
+                        <p>
+                            <strong>Telephone: </strong> <a style="color:#000000" href="tel:<?= $phone ?>"><?= $phone ?></a>
+                        </p>
+                        <?php if ($phone_2) { ?>
+                            <p><strong>Telephone 2: </strong> <a style="color:#000000" href="tel:<?= $phone_2 ?>"><?= $phone_2 ?></a></p>
+                        <?php } ?>
+                        <p><strong>Email:</strong> <a style="color:#000000" href="mailto:<?= $email_staff ?>"><?= $email_staff ?></a></p>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="padding-top:13px">
+                    <div class="row">
+                        <div class="col-sm-6" style="padding-bottom:30px; color:#000000">
+                            <?php if ($image_staff) { ?>
+                                <p style="text-align:center"><img style="width:50%; border-radius: 50%" src="<?= $image_staff ?>"></p>
+                            <?php } ?>
+                            <p style="text-align:center; margin:0px; padding:0px; padding-bottom:3px"><?= $name_staff ?></p>
+                            <p style="text-align:center; margin:0px; padding:0px; padding-bottom:6px"><?= $position ?></p>
+                            <p style="text-align:center; margin:0px; padding:0px; padding-bottom:3px; font-weight:500; color:#000000">
+                                <a style="color:#000000" href="tel:<?= $phone ?>"><?= $phone ?></a>
+                                <?php if ($phone_2) { ?>
+                                    - <a style="color:#000000" href="tel:<?= $phone_2 ?>"><?= $phone_2 ?></a>
+                                <?php } ?>
+                            </p>
+                            <p style="text-align:center; margin:0px; padding:0px; padding-top:6px">
+                                <a href="https://zalo.me/<?= $phone ?>"><img title="CHAT ZALO: <?= $phone ?>" style="width:28px" src="<?= get_template_directory_uri() . '/resources/assets/images/zalo_con.png' ?>"></a>
+                                <a href="mailto:<?= $email_staff ?>"><img title="Email: <?= $email_staff ?>" style="width:28px" src="<?= get_template_directory_uri() . '/resources/assets/images/email_icon.png' ?>"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div style="background:#ffffff">
         <div class="container" style="padding-top:50px; padding-bottom:50px">
             <div class="row">

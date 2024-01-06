@@ -215,7 +215,7 @@
     </div>
 
 
-    <div style="background:#0064b2">
+    <div style="background:#7e7e7e">
 
         <style>
             .chitiet_whyme1 {
@@ -232,9 +232,14 @@
                 }
             }
         </style>
+
+        <?php
+        $why_heading = get_field('why_heading', get_the_ID());
+        $list_whyme = get_field('list_whyme', get_the_ID());
+        ?>
         <div class="container" style="padding-top:50px; padding-bottom:50px">
             <div style="width:100%; padding-bottom:30px; text-align:center">
-                <h2 style="color:#ffffff">WHY YOU SHOULD CHOOSE US?</h2>
+                <h2 style="color:#ffffff"><?= $why_heading ?></h2>
                 <p style="color:#ffffff"></p>
             </div>
             <div class="row">
@@ -254,72 +259,39 @@
                         }
                     }
                 </style>
-
-                <div class="chitiet_whyme_style1">
-                    <div class="row">
-                        <div class="col-sm-3" style="padding:8px">
-                            <div style=" width:100%; margin-bottom:30px; text-align:center">
-
-                                <img class="whyme_img" src="whyme_images/1202/thietke.png">
-
+                <?php if ($list_whyme) { ?>
+                    <?php foreach ($list_whyme as $key => $value) { ?>
+                        <div class="chitiet_whyme_style1">
+                            <div class="row">
+                                <div class="col-sm-3" style="padding:8px">
+                                    <div style=" width:100%; margin-bottom:30px; text-align:center">
+                                        <?php if ($value['icon']) { ?>
+                                            <img class="whyme_img" src="<?= $value['icon'] ?>">
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9" style="padding:8px">
+                                    <div class="whyme_tomtat">
+                                        <h5 style="color:#ffffff"><?= $value['heading'] ?></h5>
+                                        <p style="text-align:justify; color:#ffffff"><?= $value['desc'] ?></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-9" style="padding:8px">
-                            <div class="whyme_tomtat">
-                                <h5 style="color:#ffffff">Free design</h5>
-                                <p style="text-align:justify; color:#ffffff">As a dedicated, professional unit in the textile and garment industry, we offer free design consultation services to meet all customer requirements and free nationwide shipping on thousands of our products.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chitiet_whyme_style1">
-                    <div class="row">
-                        <div class="col-sm-3" style="padding:8px">
-                            <div style=" width:100%; margin-bottom:30px; text-align:center">
-
-                                <img class="whyme_img" src="whyme_images/1202/haumai.png">
-
-                            </div>
-                        </div>
-                        <div class="col-sm-9" style="padding:8px">
-                            <div class="whyme_tomtat">
-                                <h5 style="color:#ffffff">Excellent quality</h5>
-                                <p style="text-align:justify; color:#ffffff">We take pride in using the finest quality materials and advanced machinery to ensure our uniforms are both durable and comfortable, thus becoming a trusted choice for many domestic partners and customers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chitiet_whyme_style1">
-                    <div class="row">
-                        <div class="col-sm-3" style="padding:8px">
-                            <div style=" width:100%; margin-bottom:30px; text-align:center">
-
-                                <img class="whyme_img" src="whyme_images/1202/chatluong.png">
-
-                            </div>
-                        </div>
-                        <div class="col-sm-9" style="padding:8px">
-                            <div class="whyme_tomtat">
-                                <h5 style="color:#ffffff">Warranty policy</h5>
-                                <p style="text-align:justify; color:#ffffff">Customers can return the product for free within 10 days if there are any errors from the manufacturer. We guarantee the quality of our printing and embroidery quality for 6 months from the date of receiving the goods.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                    <?php } ?>
+                <?php } ?>
             </div>
         </div>
 
     </div>
-
+    <?php
+    $client_heading = get_field('client_heading', 'option');
+    $logo_client = get_field('logo_client', 'option');
+    ?>
     <div style="background:#ffffff">
         <div class="container" style="padding-top:50px; padding-bottom:50px">
-
             <div style="width:100%; padding-bottom:10px; text-align:center">
-                <h2 style="color:#0064b2">OUR CUSTOMERS AND PARTNERS</h2>
-
+                <h2><?= $client_heading ?></h2>
             </div>
             <div class="row" style="margin-top:15px">
                 <style>
@@ -337,129 +309,15 @@
                         }
                     }
                 </style>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/ahamove.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/fpt.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/honda.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/kangaroo.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/lavie.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/lg.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/omo.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/prudential.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/pvi.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/vinamilk.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/coca.jpg">
-                </div>
-
-                <div class="khachhangvadoitac2" style="padding-bottom:30px">
-
-                    <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="doitac_images/1202/kotex_.jpg">
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div style="background:#effbff">
-
-        <div class="container" style="padding-top:50px; padding-bottom:38px">
-            <div style="width:100%; padding-bottom:10px; text-align:center">
-                <h2 style="color:#0064b2">CONTACT US NOW!</h2>
-
-            </div>
-
-
-            <div class="row" style="margin-top:15px">
-
-                <div class="col-sm-6" style="padding-top:13px">
-                    <div style="width:100%; height:auto; border:#CCCCCC; border-style:solid; border-width:1px; border-radius: 10px 10px 10px 10px; padding:18px; color:#000000">
-                        <h5><span style="text-transform:uppercase">Thu Toan Production Trading Service Co., Ltd.</span></h5>
-
-                        <p><strong>Address: </strong> 62/31 Ly Chinh Thang Street, Vo Thi Sau Ward, District 3, HCMC, VN<br><b>Warehouse:</b>&nbsp;115 Street 5, An Khanh W., Ninh Kieu Dist., Can Tho, VN</p>
-
-                        <p>
-                            <strong>Telephone: </strong> <a style="color:#000000" href="tel:+84937557105">+84937557105</a>
-                        </p>
-
-                        <p>
-                            <strong>Hotline: </strong> <a style="color:#000000" href="tel:+84913040811">+84913040811</a>
-                        </p>
-
-                        <p><strong>Email:</strong> <a style="color:#000000" href="mailto:fashion@thutoan.com.vn">fashion@thutoan.com.vn</a></p>
-
-                    </div>
-                </div>
-                <div class="col-sm-6" style="padding-top:13px">
-                    <div class="row">
-                        <style>
-
-                        </style>
-
-                        <div class="col-sm-6" style="padding-bottom:30px; color:#000000">
-                            <p style="text-align:center"><img style="width:50%; border-radius: 50%" src="contact_images/1202/ms 2.png"></p>
-                            <p style="text-align:center; margin:0px; padding:0px; padding-bottom:3px">Ms. Nguyen Thi Nguyet Thu</p>
-                            <p style="text-align:center; margin:0px; padding:0px; padding-bottom:6px">Representative</p>
-                            <p style="text-align:center; margin:0px; padding:0px; padding-bottom:3px; font-weight:500; color:#000000">
-
-                                <a style="color:#000000" href="tel:+84937557105">+84937557105</a>
-                                - <a style="color:#000000" href="tel:+84913040811">+84913040811</a>
-
-                            </p>
-                            <p style="text-align:center; margin:0px; padding:0px; padding-top:6px">
-                                <a href="https://zalo.me/+84913040811"><img title="CHAT ZALO: +84913040811" style="width:28px" src="images/zalo_con.png"></a>
-                                <a href="mailto:fashion@thutoan.com.vn"><img title="Email: fashion@thutoan.com.vn" style="width:28px" src="images/email_icon.png"></a>
-                            </p>
+                <?php if ($logo_client) { ?>
+                    <?php foreach ($logo_client as $key => $value) { ?>
+                        <div class="khachhangvadoitac2" style="padding-bottom:30px">
+                            <img style="width:100%; border-radius: 10px 10px 10px 10px; border:#EEE; border-style:solid; border-width:1px" src="<?= $value ?>">
                         </div>
-
-                    </div>
-                </div>
-
+                    <?php } ?>
+                <?php } ?>
             </div>
         </div>
-
     </div>
 </div>
 

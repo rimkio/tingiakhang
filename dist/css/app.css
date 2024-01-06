@@ -8430,7 +8430,7 @@ img {
 }
 
 #breadcrumbs {
-  color: var(--prim, #11542B);
+  color: var(--prim, #C39B46);
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
@@ -8438,30 +8438,40 @@ img {
   line-height: 18px;
 }
 
-.hlx-heading {
-  color: #222;
-  text-align: center;
-  font-family: Montserrat Alternates;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 36px;
-  /* 100% */
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 11px;
-  margin-bottom: 60px;
+.site_breadcrumb {
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 
-.hlx-heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--prim, #11542B);
-  height: 4px;
-  width: 44px;
+.site_breadcrumb #breadcrumbs {
+  color: #222;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.gallery-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .gallery-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.top_contact .icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 .logged-in .tgk-header .tgk-header-inner .tgk-header-menu {
@@ -8654,5 +8664,58 @@ img {
 
 .carousel .slick-dots li button {
   display: none;
+}
+
+.list-categories__wrap a {
+  display: block;
+}
+
+.list-categories__wrap.active .toggle-cat {
+  background-color: #eee;
+}
+
+.list-categories__wrap.active .toggle-cat::before {
+  display: none;
+}
+
+.list-categories__wrap .toggle-cat {
+  color: #111;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  padding: 10px;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.list-categories__wrap .toggle-cat::before {
+  content: "";
+  height: 16px;
+  width: 2px;
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  background-color: #222;
+}
+
+.list-categories__wrap .toggle-cat::after {
+  content: "";
+  height: 2px;
+  width: 16px;
+  position: absolute;
+  right: 10px;
+  top: 21px;
+  background-color: #222;
+}
+
+.list-categories__wrap .list-wrap-product {
+  display: none;
+  padding: 0 18px;
 }
 
