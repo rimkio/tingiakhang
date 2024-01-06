@@ -129,41 +129,16 @@ $position = get_field("position", "option");
                         <div style="height:auto">
                             <p style="padding-top:10px; clear:both"></p>
 
-                            <p><a style="color:#222222; font-weight:500" href="http://www.thutoanfashion.com.vn">HOME</a></p>
-
-                            <p style="margin-bottom:6px"><a style="color:#222222" href="http://www.thutoanfashion.com.vn/aboutus">ABOUT US</a></p>
-
-                            <div class="dropup">
-                                <button class="dropbtn" style="color:#222222; text-align:left">UNIFORMS</button>
-                                <div class="dropup-content">
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12176/polos.html">POLOS</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12177/uniform-jackets.html">UNIFORM JACKETS</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12178/uniform-shirts-for-office.html">UNIFORM SHIRTS FOR OFFICE</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12182/office-uniforms.html">OFFICE UNIFORMS</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12188/restaurant-and-hotel-staff-uniforms.html">RESTAURANT AND HOTEL STAFF UNIFORMS</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12183/protective-clothing.html">PROTECTIVE CLOTHING</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12184/hospital-uniforms.html">HOSPITAL UNIFORMS</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12185/class-uniforms.html">CLASS UNIFORMS</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12187/event-uniforms.html">EVENT UNIFORMS</a>
-
-                                    <a style="text-transform:uppercase" href="http://www.thutoanfashion.com.vn/category/12186/caps-and-hats.html">CAPS AND HATS</a>
-
-                                </div>
-                            </div>
-
-                            <p><a style="color:#222222" href="http://www.thutoanfashion.com.vn/photo">PHOTO LIBRARY</a></p>
-
-                            <p><a style="color:#222222" href="http://www.thutoanfashion.com.vn/contact"><b>CONTACT INFORMATION</b></a></p>
-
+                            <?php
+                            if (has_nav_menu('main-menu')) {
+                                wp_nav_menu([
+                                    'theme_location' => 'main-menu',
+                                    'menu_class' => 'main-menu',
+                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    'bootstrap' => false
+                                ]);
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

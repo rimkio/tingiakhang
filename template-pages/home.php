@@ -60,13 +60,13 @@
                         <?php $thumbnail = get_field('image', $value->taxonomy . '_' . $value->term_id); ?>
                         <div class="col-sm-3">
                             <div class="nganhnghe_show_home">
-                                <a href="<?= get_permalink($value->term_id) ?>">
+                                <a href="<?= get_term_link($value->term_id, "loai-san-pham") ?>">
                                     <?php if ($thumbnail) { ?>
                                         <img src="<?= $thumbnail ?>" alt="<?= $value->name ?>">
                                     <?php } ?>
                                 </a>
                                 <div class="content">
-                                    <h6 style="text-align:center; text-transform:uppercase"><a style="color:#FFFFFF" href="<?= get_permalink($value->term_id) ?>"><?= $value->name ?></a></h6>
+                                    <h6 style="text-align:center; text-transform:uppercase"><a style="color:#FFFFFF" href="<?= get_term_link($value->term_id, "loai-san-pham") ?>"><?= $value->name ?></a></h6>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,9 @@
         }
     </style>
     <div style="height:auto; clear:both;text-align:center">
-        <img style="width:100%" src="http://www.thutoanfashion.com.vn/nganh_banner/1202/banner.jpg" alt="POLOS">
+        <?php if (get_field('banner_category', 'option')) { ?>
+            <img style="width:100%" src="<?= get_field('banner_category', 'option') ?>" alt="POLOS">
+        <?php } ?>
     </div>
     <?php $type_product = __get_field('type_product');
     if ($type_product) {
@@ -114,7 +116,7 @@
                 <div class="container">
                     <div style="width:100%">
                         <h2 style="text-align:center; padding-bottom:20px; padding-top:50px; text-transform:uppercase">
-                            <a href="<?= get_permalink($tax->term_id) ?>"><?= $tax->name ?></a>
+                            <a href="<?= get_term_link($tax->term_id, "loai-san-pham") ?>"><?= $tax->name ?></a>
                         </h2>
 
                         <p class="text_slogan_nganh" style="color:#666666; text-align:center"><b><i><?= $tax->description ?></i></b></p>
