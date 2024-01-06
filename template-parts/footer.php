@@ -70,7 +70,7 @@ $position = get_field("position", "option");
                             <a href="http://www.thutoanfashion.com.vn"><img style="max-width:250px;" src="<?= $logo ?>"></a>
 
                         </div>
-                        <div style="height:auto; padding-right:50px; padding-top:20px; color:#222222">
+                        <div style="height:auto; padding-top:20px; color:#222222">
                             <p style="text-align:justify"><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:16px"><?= $intro ?></span></span></p>
 
                             <p style="text-align:justify"><?= $map ?></p>
@@ -132,8 +132,8 @@ $position = get_field("position", "option");
                             <?php
                             if (has_nav_menu('main-menu')) {
                                 wp_nav_menu([
-                                    'theme_location' => 'main-menu',
-                                    'menu_class' => 'main-menu',
+                                    'theme_location' => 'footer-menu',
+                                    'menu_class' => 'footer-menu',
                                     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                                     'bootstrap' => false
                                 ]);

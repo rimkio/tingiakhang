@@ -255,7 +255,7 @@
 
                     @media screen and (max-width: 700px) {
                         .chitiet_whyme_style1 {
-                            width: 50%;
+                            width: 100%;
                             padding-left: 15px;
                             padding-right: 15px
                         }
