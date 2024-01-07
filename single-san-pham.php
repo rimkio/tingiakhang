@@ -174,7 +174,7 @@
                 <?php
                 $args = array(
                     'post_type' => 'san-pham',
-                    'posts_per_page' => 6,
+                    'posts_per_page' => 4,
                     'post_status' => 'publish',
                     'post__not_in' => array(get_the_ID()),
                     'orderby' => 'rand',
