@@ -26,27 +26,44 @@ img {
    }
 }
 
-.fullwidth{
+.fullwidth {
    width: 100%;
 }
 
-.gallery-wrap{
+.gallery-wrap {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 20px;
-   @media (max-width: 991px){
+
+   @media (max-width: 991px) {
       grid-template-columns: repeat(2, 1fr);
    }
-   @media (max-width: 600px){
+
+   @media (max-width: 600px) {
       grid-template-columns: repeat(1, 1fr);
    }
 }
 
-.top_contact{
-   .icon{
-      svg{
+.top_contact {
+   .icon {
+      svg {
          width: 16px;
          height: 16px;
       }
+   }
+}
+
+#contact_fixed a {
+   position: fixed;
+   left: 15px;
+   transition: 0.3s;
+   width: 50px;
+   text-decoration: none;
+   font-size: 25px;
+   z-index: 2;
+
+   svg {
+      width: 30px;
+      height: 30px;
    }
 }
