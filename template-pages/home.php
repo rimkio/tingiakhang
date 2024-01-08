@@ -35,7 +35,7 @@
                 <style>
                     .nganhnghe_show_home {
                         width: 100%;
-                        background: #FFCC33;
+                        background: #fffbf0;
                         margin-bottom: 30px;
                         position: relative
                     }
