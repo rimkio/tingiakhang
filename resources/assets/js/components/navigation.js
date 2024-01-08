@@ -20,8 +20,8 @@
         });
 
         $(document).on("click", ".tgk-header-menu .menu-item-has-children", function (e) {
-            e.preventDefault();
             if ($(window).width() < 767) {
+                e.preventDefault();
                 $(this).find('.sub-menu').slideToggle(500);
             }
         });
