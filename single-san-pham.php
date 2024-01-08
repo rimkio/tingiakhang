@@ -23,12 +23,10 @@
                             <div style="height: auto">
                                 <div style="height:auto; border-bottom-color:#CCCCCC; border-bottom-style:solid; border-bottom-width:1px">
                                     <h1 style="font-size:28px"><?= get_the_title() ?></h1>
-                                    <p style="margin-top:10px; margin-bottom:3px">
-                                        <strong>Tình trạng:</strong> <?= get_field('status', get_the_ID()); ?>
-                                    </p>
+
                                     <p style=" margin-top:6px; margin-bottom:10px">
                                         <strong>Giá sản phẩm: </strong>
-                                        <span style="color:red; font-size:24px;"> <?= get_field('price', get_the_ID()); ?></span>
+                                        <span style="color:red; font-size:24px;"> Liên hệ</span>
                                     </p>
 
                                 </div>

@@ -184,8 +184,6 @@
                                                     <p style="font-weight:600; text-align:center; margin:0px; padding-top:23px; padding-bottom:6px">
                                                         <a style="color:#111" href="<?= get_permalink() ?>"><?= get_the_title() ?></a>
                                                     </p>
-                                                    <p style="text-align:center; color:#111111;  margin:0px"><i>Giá cả:</i> <?= get_field('price', get_the_ID()); ?></p>
-                                                    <p style="text-align:center; color:#111111; margin:0px; "><i>Tình trạng:</i> <?= get_field('status', get_the_ID()); ?></p>
                                                 </div>
                                             </div>
                                         </div>
